@@ -1,11 +1,11 @@
-module SimpleEncryption
-  class Encrypter
+module SimpleScrambler
+  class Scrambler
 
     class NoMessageError < StandardError; end
     
-    def self.encrypt(message)
+    def self.scramble(message)
       raise_error_when_message_is_nil(message)
-      cipher.encrypt(message)
+      cipher.scramble(message)
     end
 
     def self.decrypt(message)
@@ -20,7 +20,7 @@ module SimpleEncryption
     end
 
     def self.cipher
-      SimpleEncryption::Configuration.config.encryption_algorithm
+      SimpleScrambler::Configuration.scrambler_algorithm
     end
 
   end

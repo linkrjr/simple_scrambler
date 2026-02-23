@@ -1,10 +1,10 @@
-module SimpleEncryption
+module SimpleScrambler
   module SubstitutionCipher
     extend ActiveSupport::Concern
 
     module ClassMethods
       
-      def encrypt(message)
+      def scramble(message)
         perform(message.downcase)
       end
 

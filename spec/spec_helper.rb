@@ -1,17 +1,17 @@
 require 'rubygems'
-require 'simple_encryption'
+require 'simple_scrambler'
 require 'rspec'
 require "codeclimate-test-reporter"
 
-CodeClimate::TestReporter.start
+# CodeClimate::TestReporter.start
 
 Dir[File.expand_path('../support/**/*.rb', __FILE__)].each {|f| require f}
 
 RSpec.configure do |config|  
 
   config.after :each do  
-    SimpleEncryption::Configuration.configure do |config|
-      config.encryption_algorithm = SimpleEncryption::Ciphers::ZenitPolar
+    SimpleScrambler::Configuration.setup do |config|
+      config.scrambler_algorithm = SimpleScrambler::Ciphers::ZenitPolar
     end
   end
 

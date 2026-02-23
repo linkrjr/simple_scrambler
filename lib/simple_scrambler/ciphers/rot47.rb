@@ -1,12 +1,12 @@
-module SimpleEncryption
+module SimpleScrambler
   module Ciphers
     class ROT47
-      include SimpleEncryption::SubstitutionCipher
+      include SimpleScrambler::SubstitutionCipher
       
       CHARACTERS = (33..126).map(&:chr)
       FACTOR = 47
 
-      def self.encrypt(message)
+      def self.scramble(message)
         perform(message)
       end
 

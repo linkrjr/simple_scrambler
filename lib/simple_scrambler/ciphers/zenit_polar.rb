@@ -1,7 +1,7 @@
-module SimpleEncryption
+module SimpleScrambler
   module Ciphers
     class ZenitPolar
-      include SimpleEncryption::SubstitutionCipher
+      include SimpleScrambler::SubstitutionCipher
 
       CHARACTERS = %w(z e n i t p o l a r)
       FACTOR = 5

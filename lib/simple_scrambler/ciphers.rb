@@ -1,4 +1,4 @@
-module SimpleEncryption
+module SimpleScrambler
   module Ciphers
   end
 end

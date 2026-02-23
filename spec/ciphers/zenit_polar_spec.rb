@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe SimpleEncryption::Ciphers::ZenitPolar do
+describe SimpleScrambler::Ciphers::ZenitPolar do
 
-  describe ".encrypt" do
-    it { expect(subject.class.encrypt("message")).to eql("mossigo") }
-    it { expect(subject.class.encrypt("Message")).to eql("mossigo") }
-    it { expect(subject.class.encrypt("hello world")).to eql("honne wetnd") }
+  describe ".scramble" do
+    it { expect(subject.class.scramble("message")).to eql("mossigo") }
+    it { expect(subject.class.scramble("Message")).to eql("mossigo") }
+    it { expect(subject.class.scramble("hello world")).to eql("honne wetnd") }
   end
   
   describe ".decrypt" do

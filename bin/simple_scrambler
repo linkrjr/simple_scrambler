@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'optparse'
-require 'simple_encryption'
+require 'simple_scrambler'
 
 options = {}
 
@@ -10,7 +10,7 @@ opt_parser = OptionParser.new do |opt|
   opt.banner = "Usage: simple_enc [OPTIONS] text"
   opt.separator ""
   opt.separator "Options"
-  opt.on("-c", "--cipher NAME", "the cipher name used to encrypt the text. ZENIT, ROT13 or ROT47") do |cipher|
+  opt.on("-c", "--cipher NAME", "the cipher name used to scramble the text. ZENIT, ROT13 or ROT47") do |cipher|
     options[:cipher] = cipher
   end
   
@@ -22,14 +22,14 @@ opt_parser.parse!
 
 cipher = options[:cipher] || 'ZENIT'
 
-SimpleEncryption::Configuration.configure do |config|
+SimpleScrambler::Configuration.configure do |config|
   case cipher
   when "ZENIT"
-    config.encryption_algorithm = SimpleEncryption::Ciphers::ZenitPolar
+    config.scrambler_algorithm = SimpleScrambler::Ciphers::ZenitPolar
   when "ROT13"
-    config.encryption_algorithm = SimpleEncryption::Ciphers::ROT13
+    config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT13
   when "ROT47"
-    config.encryption_algorithm = SimpleEncryption::Ciphers::ROT47
+    config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT47
   end
   
 end
@@ -37,5 +37,5 @@ end
 if ARGV[0] == nil
   puts opt_parser
 else
-  puts SimpleEncryption::Encrypter.encrypt(ARGV[0])
+  puts SimpleScrambler::Scrambler.scramble(ARGV[0])
 end  

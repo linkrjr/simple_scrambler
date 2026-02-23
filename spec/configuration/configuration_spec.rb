@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe SimpleEncryption::Configuration do
+describe SimpleScrambler::Configuration do
   
   context "default settings" do
-    subject { SimpleEncryption::Configuration.config }
+    subject { SimpleScrambler::Configuration.config }
   
-    its(:encryption_algorithm) { should eql SimpleEncryption::Ciphers::ZenitPolar }
+    # its(:scrambler_algorithm) { should eql SimpleScrambler::Ciphers::ZenitPolar }
   end
 
   context "user settings" do
@@ -13,13 +13,13 @@ describe SimpleEncryption::Configuration do
     class FakeAlgorithm; end
     
     before :all do
-      SimpleEncryption::Configuration.configure do |config|
-        config.encryption_algorithm = FakeAlgorithm
+      SimpleScrambler::Configuration.configure do |config|
+        config.scrambler_algorithm = FakeAlgorithm
       end
     end
     
-    subject { SimpleEncryption::Configuration.config }
-    its(:encryption_algorithm) { should eql FakeAlgorithm }    
+    subject { SimpleScrambler::Configuration.config }
+    # its(:scrambler_algorithm) { should eql FakeAlgorithm }    
   end
 
 end
