@@ -33,20 +33,20 @@ Simple Scrambler is very simple to use, just install the gem as described above 
 SimpleScrambler::Scrambler.scramble("message to scramble")
 ```
 
-By default Simple Scrambler uses the [Zenit Polar](http://pt.wikipedia.org/wiki/Zenit_Polar) cipher, you can change it to use one of the other included ciphers ([ROT13](https://en.wikipedia.org/wiki/ROT13), ROT47).
+By default Simple Scrambler uses the [Zenit Polar](http://pt.wikipedia.org/wiki/Zenit_Polar) scrambler, you can change it to use one of the other included ciphers ([ROT13](https://en.wikipedia.org/wiki/ROT13), ROT47).
 
 Simply create add an initialization file to your rails project and add the following lines to it
 
 ```ruby 
 SimpleScrambler::Configuration.configure do |config|
-  config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT13
+  config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT13
 end
 ```
 or
 
 ```ruby
 SimpleScrambler::Configuration.configure do |config|
-  config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT47
+  config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT47
 end
 ```
 

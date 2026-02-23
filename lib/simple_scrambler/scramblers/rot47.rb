@@ -1,5 +1,5 @@
 module SimpleScrambler
-  module Ciphers
+  module Scramblers
     class ROT47
       include SimpleScrambler::SubstitutionCipher
       

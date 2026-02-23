@@ -11,7 +11,7 @@ RSpec.configure do |config|
 
   config.after :each do  
     SimpleScrambler::Configuration.setup do |config|
-      config.scrambler_algorithm = SimpleScrambler::Ciphers::ZenitPolar
+      config.scrambler_algorithm = SimpleScrambler::Scramblers::ZenitPolar
     end
   end
 

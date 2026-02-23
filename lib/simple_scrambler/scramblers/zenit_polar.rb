@@ -1,5 +1,5 @@
 module SimpleScrambler
-  module Ciphers
+  module Scramblers
     class ZenitPolar
       include SimpleScrambler::SubstitutionCipher
 

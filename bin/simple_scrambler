@@ -25,11 +25,11 @@ cipher = options[:cipher] || 'ZENIT'
 SimpleScrambler::Configuration.configure do |config|
   case cipher
   when "ZENIT"
-    config.scrambler_algorithm = SimpleScrambler::Ciphers::ZenitPolar
+    config.scrambler_algorithm = SimpleScrambler::Scramblers::ZenitPolar
   when "ROT13"
-    config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT13
+    config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT13
   when "ROT47"
-    config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT47
+    config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT47
   end
   
 end

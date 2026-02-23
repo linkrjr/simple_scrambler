@@ -7,6 +7,6 @@ module SimpleScrambler
   autoload :Version
   autoload :Configuration
   autoload :SubstitutionCipher
-  autoload :Ciphers
+  autoload :Scramblers
   autoload :Scrambler
 end

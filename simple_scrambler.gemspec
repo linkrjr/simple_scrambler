@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ron Gomes"]
   spec.email         = ["rongomes15@gmail.com"]
   spec.description   = %q{Simple Scrambler is an implementation of some examples of Substitution cipher. It includes implementations for Zenit Polar, ROT13 and ROT47}
-  spec.summary       = %q{Simple Scrambler implements Substitution Ciphers like Zenit Polar, ROT13 and ROT47}
+  spec.summary       = %q{Simple Scrambler implements Substitution Scramblers like Zenit Polar, ROT13 and ROT47}
   spec.homepage      = "https://github.com/linkrjr/simple_scrambler.git"
   spec.license       = "MIT"
 
@@ -19,12 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler"
-  # spec.add_development_dependency 'ronn'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'fuubar'
   spec.add_development_dependency 'codeclimate-test-reporter'
   spec.add_development_dependency 'pry'
-  # spec.add_development_dependency 'pry-debugger'
   spec.add_development_dependency 'rake'
   
   spec.add_dependency 'activesupport', ['>= 8.1.2']

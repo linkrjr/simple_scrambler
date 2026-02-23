@@ -15,7 +15,7 @@ describe SimpleScrambler::Scrambler do
     context "when using the ROT13 cipher" do
       before do
         SimpleScrambler::Configuration.setup do |config|
-          config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT13
+          config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT13
         end
       end
 
@@ -28,7 +28,7 @@ describe SimpleScrambler::Scrambler do
     context "when using the ROT47 cipher" do
       before do
         SimpleScrambler::Configuration.setup do |config|
-          config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT47
+          config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT47
         end
       end
 
@@ -48,7 +48,7 @@ describe SimpleScrambler::Scrambler do
     context "when using the ROT13 cipher" do
       before do
         SimpleScrambler::Configuration.setup do |config|
-          config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT13
+          config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT13
         end
       end
 
@@ -61,7 +61,7 @@ describe SimpleScrambler::Scrambler do
     context "when using the ROT47 cipher" do
       before do
         SimpleScrambler::Configuration.setup do |config|
-          config.scrambler_algorithm = SimpleScrambler::Ciphers::ROT47
+          config.scrambler_algorithm = SimpleScrambler::Scramblers::ROT47
         end
       end
 

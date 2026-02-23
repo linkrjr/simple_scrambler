@@ -5,7 +5,7 @@ describe SimpleScrambler::Configuration do
   context "default settings" do
     subject { SimpleScrambler::Configuration.config }
   
-    # its(:scrambler_algorithm) { should eql SimpleScrambler::Ciphers::ZenitPolar }
+    # its(:scrambler_algorithm) { should eql SimpleScrambler::Scramblers::ZenitPolar }
   end
 
   context "user settings" do

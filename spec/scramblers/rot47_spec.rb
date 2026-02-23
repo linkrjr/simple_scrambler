@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SimpleScrambler::Ciphers::ROT47 do 
+describe SimpleScrambler::Scramblers::ROT47 do 
 
   describe ".scramble" do
     it { expect(subject.class.scramble("hello")).to eql("96==@") }

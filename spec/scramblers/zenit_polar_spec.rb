@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SimpleScrambler::Ciphers::ZenitPolar do
+describe SimpleScrambler::Scramblers::ZenitPolar do
 
   describe ".scramble" do
     it { expect(subject.class.scramble("message")).to eql("mossigo") }
